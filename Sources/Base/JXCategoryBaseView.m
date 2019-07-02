@@ -289,6 +289,7 @@ struct DelegateFlags {
     _dataSource = [NSMutableArray array];
     _selectedIndex = 0;
     _cellWidth = JXCategoryViewAutomaticDimension;
+    _isRefreshIndex = YES;
     _cellWidthIncrement = 0;
     _cellSpacing = 20;
     _averageCellSpacingEnabled = YES;

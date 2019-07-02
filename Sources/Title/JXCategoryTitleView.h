@@ -32,6 +32,7 @@
 @property (nonatomic, strong) UIColor *titleColor;      //默认：[UIColor blackColor]
 
 @property (nonatomic, strong) UIColor *titleSelectedColor;      //默认：[UIColor redColor]
+@property (nonatomic, assign) BOOL isRtlLanguage;
 
 @property (nonatomic, strong) UIFont *titleFont;    //默认：[UIFont systemFontOfSize:15]
 

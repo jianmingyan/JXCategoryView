@@ -54,6 +54,12 @@
         [tempArray addObject:cellModel];
     }
     self.dataSource = tempArray;
+    if (self.isRtlLanguage) {
+        if (self.isRefreshIndex) {
+            self.selectedIndex = self.dataSource.count - 1 - self.selectedIndex;
+            self.isRefreshIndex = NO;
+        }
+    }
 }
 
 - (void)refreshSelectedCellModel:(JXCategoryBaseCellModel *)selectedCellModel unselectedCellModel:(JXCategoryBaseCellModel *)unselectedCellModel {
