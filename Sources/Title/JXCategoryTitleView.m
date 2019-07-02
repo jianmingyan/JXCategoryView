@@ -11,6 +11,8 @@
 
 @interface JXCategoryTitleView ()
 
+@property (nonatomic, assign) NSInteger selectedIndex;
+
 @end
 
 @implementation JXCategoryTitleView
