@@ -207,14 +207,22 @@ struct DelegateFlags {
 
 - (CGFloat)getContentEdgeInsetLeft {
     if (self.contentEdgeInsetLeft == JXCategoryViewAutomaticDimension) {
-        return self.innerCellSpacing;
+        if (_isNavigationBar) {
+            return 5;
+        }else{
+            return self.innerCellSpacing;
+        }
     }
     return self.contentEdgeInsetLeft;
 }
 
 - (CGFloat)getContentEdgeInsetRight {
     if (self.contentEdgeInsetRight == JXCategoryViewAutomaticDimension) {
-        return self.innerCellSpacing;
+        if (_isNavigationBar) {
+            return 5;
+        }else{
+            return self.innerCellSpacing;
+        }
     }
     return self.contentEdgeInsetRight;
 }
@@ -290,6 +298,7 @@ struct DelegateFlags {
     _selectedIndex = 0;
     _cellWidth = JXCategoryViewAutomaticDimension;
     _isRefreshIndex = YES;
+    _isNavigationBar = NO;
     _cellWidthIncrement = 0;
     _cellSpacing = 20;
     _averageCellSpacingEnabled = YES;
