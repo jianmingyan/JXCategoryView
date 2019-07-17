@@ -89,7 +89,7 @@
 
 @property (nonatomic, assign, readonly) NSInteger selectedIndex;
 
-@property (nonatomic, assign) BOOL isRefreshIndex;//是否需要刷新selectIndex
+@property (nonatomic, assign) BOOL isRefreshIndex;//是否需要刷新selectIndex(默认YES)
 
 @property (nonatomic, assign, getter=isContentScrollViewClickTransitionAnimationEnabled) BOOL contentScrollViewClickTransitionAnimationEnabled;    //默认为YES，只有当delegate未实现`- (void)categoryView:(JXCategoryBaseView *)categoryView didClickedItemContentScrollViewTransitionToIndex:(NSInteger)index`代理方法时才有效
 
@@ -102,6 +102,8 @@
 @property (nonatomic, assign) CGFloat cellWidthIncrement;    //cell宽度补偿。默认：0
 
 @property (nonatomic, assign) CGFloat cellSpacing;    //cell之间的间距，默认20
+
+@property (nonatomic, assign) BOOL isNavigationBar;//是否放在顶部Navigation里面（默认NO）
 
 @property (nonatomic, assign, getter=isAverageCellSpacingEnabled) BOOL averageCellSpacingEnabled;     //当collectionView.contentSize.width小于JXCategoryBaseView的宽度，是否将cellSpacing均分。默认为YES。
 
