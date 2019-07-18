@@ -91,7 +91,9 @@
 
 @property (nonatomic, assign) BOOL isRefreshIndex;//是否需要刷新selectIndex
 
-@property (nonatomic, assign) BOOL isNavigationBar;//是否放在顶部Navigation里面（默认NO）        
+@property (nonatomic, assign) BOOL isNavigationBar;//是否放在顶部Navigation里面（默认NO）
+
+@property (nonatomic, assign) BOOL isChinese;//默认是中文(YES)
 
 @property (nonatomic, assign, getter=isContentScrollViewClickTransitionAnimationEnabled) BOOL contentScrollViewClickTransitionAnimationEnabled;    //默认为YES，只有当delegate未实现`- (void)categoryView:(JXCategoryBaseView *)categoryView didClickedItemContentScrollViewTransitionToIndex:(NSInteger)index`代理方法时才有效
 

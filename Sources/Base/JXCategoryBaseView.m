@@ -207,7 +207,7 @@ struct DelegateFlags {
 
 - (CGFloat)getContentEdgeInsetLeft {
     if (self.contentEdgeInsetLeft == JXCategoryViewAutomaticDimension) {
-        if (_isNavigationBar) {
+        if (_isNavigationBar && _isChinese) {
             return 5;
         }else{
             return self.innerCellSpacing;
@@ -218,7 +218,7 @@ struct DelegateFlags {
 
 - (CGFloat)getContentEdgeInsetRight {
     if (self.contentEdgeInsetRight == JXCategoryViewAutomaticDimension) {
-        if (_isNavigationBar) {
+        if (_isNavigationBar && _isChinese) {
             return 5;
         }else{
             return self.innerCellSpacing;
@@ -299,6 +299,7 @@ struct DelegateFlags {
     _cellWidth = JXCategoryViewAutomaticDimension;
     _isRefreshIndex = YES;
     _isNavigationBar = NO;
+    _isChinese = YES;
     _cellWidthIncrement = 0;
     _cellSpacing = 20;
     _averageCellSpacingEnabled = YES;
